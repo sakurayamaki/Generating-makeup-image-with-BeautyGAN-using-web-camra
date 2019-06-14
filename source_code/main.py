@@ -387,7 +387,7 @@ if __name__ == "__main__":
             outImage = get_makeup_image(input_src, input_tgt, image_name)
 
 
-            input_tgt = '/makeup/images'+ str(num) + '.jpg'
+            input_tgt = './makeup/images'+ str(num) + '.jpg'
             filename = 'output/'+ str(input_name)+'.mp4'
             video_name = output_name
             get_makeup_video(input_tgt, filename, video_name)
