@@ -10,7 +10,8 @@ BeautyGAN on webcamera
 4. Then you get some question as follow. Please answer it following instruction.
 
 ### Makeup stype
- - 5 kind of makeup style 
+ - 5 kind of makeup style  
+ 
 ![images_all](https://user-images.githubusercontent.com/20176579/59491600-ab90d380-8eb9-11e9-9b2d-f54534598fd2.png)
 
 ##### Dependencies:
