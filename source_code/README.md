@@ -22,7 +22,8 @@ BeautyGAN on webcamera
  ![result](https://user-images.githubusercontent.com/20176579/59500411-f287c480-8ecb-11e9-987f-41501a252aac.gif)
  
  - Genarated with BeautyGAN video  
- ![images1_](https://user-images.githubusercontent.com/20176579/59501779-d5a0c080-8ece-11e9-925f-a8e1592b98f3.gif)
+ ![images1](https://user-images.githubusercontent.com/20176579/59502425-4f857980-8ed0-11e9-93cb-f8fe5407eaf7.gif)
+
 
 
  
