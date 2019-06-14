@@ -10,7 +10,7 @@ BeautyGAN on webcamera
 4. Then you get some question as follow. Please answer it following instruction.
 
 ### Makeup stype
-[5 kind of makeup style](https://github.com/sakurayamaki/Generating-makeup-image-with-BeautyGAN-using-web-camra/edit/master/source_code/makeup/images_all.png)
+![5 kind of makeup style](https://github.com/sakurayamaki/Generating-makeup-image-with-BeautyGAN-using-web-camra/edit/master/source_code/makeup/images_all.png)
 ##### Dependencies:
 - [dlib](http://dlib.net/)
 - [opencv-python](http://docs.opencv.org/3.0-beta/doc/py_tutorials/py_tutorials.html)
