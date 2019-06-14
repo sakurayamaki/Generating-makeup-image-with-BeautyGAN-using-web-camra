@@ -6,7 +6,7 @@ BeautyGAN on webcamera
 #### Setup:
 1. Download or clone source code from github.
 2. Run `pip install -r requirements.txt` in directry named "source_code"  
-3. Run:`python main.py` in same directry.  
+3. Run `python main.py` in same directry.  
 4. Then you get some question as follow. Please answer it following instruction.
 
 ### Makeup stype
