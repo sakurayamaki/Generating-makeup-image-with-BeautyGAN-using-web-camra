@@ -4,24 +4,12 @@ BeautyGAN on webcamera
 > This is a demo of generating makeup image from the image gotten from web camera.
 
 #### Setup:
-1. Run `pip install -r requirements.txt`
-2. Download and extract shape predictor 68 landmarks at this [link](http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2).
-3. Place the extracted predictor in the root directory of this project.
-4. Find some images with faces, tiled if possible.
+1. Download or clone source code from github.
+2. Run `pip install -r requirements.txt` in directry named "source_code"  
+3. Run:`python main.py` in same directry.  
+4. Then you get some question as follow. Please answer it following instruction.
 
-#### Run:
-```bash
-python main.py
-```
-
-#### Process log:
-```
-Which make up style do you choose?
-Input the style number.(1~5)
-Input output file name.
-Doyou want to get your face?(yes/no)
-What is your input name?
-```
+### Makeup stype
 
 ##### Dependencies:
 - [dlib](http://dlib.net/)
