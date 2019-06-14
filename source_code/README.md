@@ -17,10 +17,13 @@ BeautyGAN on webcamera
 ### Demo:
  - Makeup style(Chose image 1)  
  ![images1](https://user-images.githubusercontent.com/20176579/59495678-6ae98800-8ec2-11e9-842f-5200b9f93199.jpg)
+ 
  - Original video  
  ![result](https://user-images.githubusercontent.com/20176579/59500411-f287c480-8ecb-11e9-987f-41501a252aac.gif)
+ 
  - Genarated with BeautyGAN video  
- ![images1](https://user-images.githubusercontent.com/20176579/59500864-dc2e3880-8ecc-11e9-9d33-670472d5a8b7.gif)
+ ![images1_](https://user-images.githubusercontent.com/20176579/59501779-d5a0c080-8ece-11e9-925f-a8e1592b98f3.gif)
+
 
  
 ##### Dependencies:
