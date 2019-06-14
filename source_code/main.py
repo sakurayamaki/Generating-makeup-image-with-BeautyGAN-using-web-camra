@@ -1,5 +1,6 @@
 import os
 import sys
+import time
 import numpy as np
 from PIL import Image
 os.environ['CUDA_VISIBLE_DEVICES']='1'
@@ -35,8 +36,6 @@ class FaceDetector():
         
     def get_face(self, img):
         
-#         img = cv2.imread(img_path)
-        print(img.shape)
         height, width = img.shape[:2]
         s_height, s_width = height//self.scale, width//self.scale
         img = cv2.resize(img, (s_width, s_height))
@@ -132,7 +131,7 @@ class FaceAligner:
 def get_makeup_image(input_src, input_tgt, image_name):
     
     img_tgt = cv2.imread(input_tgt )
-#    img_tgt = imutils.resize(img_tgt, width=800)
+    img_tgt = imutils.resize(img_tgt, width=800)
     tgt_face, m = detector.get_face(img_tgt)
     tgt = cv2.cvtColor(tgt_face, cv2.COLOR_BGR2RGB)
     tgt = np.expand_dims(tgt,0)/ 127.5 -1
@@ -207,12 +206,12 @@ def get_makeup_video(input_tgt, filename, video_name):
     tgt = np.expand_dims(tgt,0)/ 127.5 -1
 
     # out.release()
-    cv2.destroyAllWindows() 
-
-
+    cv2.destroyAllWindows()
+    
+    size = (800, 450)
     frame_width,frame_height  = (800, 450)
+    
     cap = cv2.VideoCapture(filename)
-    # out = cv2.VideoWriter('out2.avi',cv2.VideoWriter_fourcc('M','J','P','G'), 10, (frame_width,frame_height))
 
     fourcc = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')
     out = cv2.VideoWriter('output/'+video_name+'.mp4', fourcc, 10, (frame_width, frame_height))
@@ -225,10 +224,14 @@ def get_makeup_video(input_tgt, filename, video_name):
         if ret == True:
             # Display the resulting frame
             ret, frame = cap.read()
+            
+#           print(type(frame))
+            if(type(frame) == "NoneType"):
+                break
 
             img_src  = imutils.resize(frame, width=800)
 
-            height, width, ch = img_src.shape
+            height, width, ch = frame.shape
 
             size = (width,height)
 
@@ -309,25 +312,25 @@ def get_makeup_video(input_tgt, filename, video_name):
 
 if __name__ == "__main__":
     print('1. Which make up style do you choose?')
-    num = input('   Input the style number.(1~6)')
-    name = input('2. Input output file name.')
+    num = input('   Input the style number.')
+    input_name = input('2. Input the name of input image.')
+    output_name = input('3. Input the name of output image.')
     flag = input('3. Do you want to get your face?(yes/no)')
     if(flag=="no"):
-        name_ = input('What is your input name?')
         tf.reset_default_graph()
         beautyGan = BeautyGAN(prediction=True , check_dir='checkpoints_ori')
         detector = FaceDetector()
         
         
         input_tgt = './makeup/images'+ str(num) + '.jpg'
-        input_src = 'output/'+ str(name_) +'.jpg'
-        image_name = name
+        input_src = 'output/'+ str(input_name) +'.jpg'
+        image_name = str(output_name)
         
         outImage = get_makeup_image(input_src, input_tgt, image_name)
     
         input_tgt = './makeup/images'+ str(num) + '.jpg'
-        filename = 'output/'+ str(name_) +'.mp4'
-        video_name = name
+        filename = 'output/'+ str(input_name) +'.mp4'
+        video_name = output_name
         
         get_makeup_video(input_tgt, filename, video_name)
 
@@ -345,10 +348,10 @@ if __name__ == "__main__":
 
             # 録画する動画のフレームサイズ（webカメラと同じにする）
             frame_width,frame_height  = (800, 450)
-
             # 出力する動画ファイルの設定
             fourcc = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')
-            video = cv2.VideoWriter('output/'+name+'.mp4', fourcc, 10, (frame_width, frame_height))
+            video = cv2.VideoWriter('output/'+ input_name +'.mp4', fourcc, 10, (frame_width, frame_height))
+            
             
             while (cap.isOpened()):
                 ret, frame = cap.read()
@@ -362,7 +365,7 @@ if __name__ == "__main__":
                 key = cv2.waitKey(1) & 0xFF
 
                 if key == ord('s'):
-                    cv2.imwrite('output/'+name+'.jpg', frame)
+                    cv2.imwrite('output/'+input_name+'.jpg', frame)
                 # キー入力待機
                 if key == ord('q'):
                     break
@@ -377,14 +380,14 @@ if __name__ == "__main__":
             beautyGan = BeautyGAN(prediction=True , check_dir='checkpoints_ori')
             detector = FaceDetector()
 
-            input_tgt = '/makeup/images'+ str(num) + '.jpg'
-            input_src = 'output/'+ str(name) +'.jpg'
-            image_name = name
+            input_tgt = './makeup/images'+ str(num) + '.jpg'
+            input_src = 'output/'+ str(input_name) +'.jpg'
+            image_name = output_name
 
             outImage = get_makeup_image(input_src, input_tgt, image_name)
 
 
             input_tgt = '/makeup/images'+ str(num) + '.jpg'
-            filename = 'output/'+ str(name)+'.mp4'
-            video_name = name
+            filename = 'output/'+ str(input_name)+'.mp4'
+            video_name = output_name
             get_makeup_video(input_tgt, filename, video_name)
