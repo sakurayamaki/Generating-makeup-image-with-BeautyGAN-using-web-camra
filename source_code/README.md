@@ -14,6 +14,10 @@ BeautyGAN on webcamera
  
 ![images_all](https://user-images.githubusercontent.com/20176579/59491600-ab90d380-8eb9-11e9-9b2d-f54534598fd2.png)
 
+### Demo
+ - Makeup style(Chose image 1)
+![images1](https://user-images.githubusercontent.com/20176579/59495678-6ae98800-8ec2-11e9-842f-5200b9f93199.jpg)
+
 ##### Dependencies:
 - [dlib](http://dlib.net/)
 - [opencv-python](http://docs.opencv.org/3.0-beta/doc/py_tutorials/py_tutorials.html)
