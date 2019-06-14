@@ -308,10 +308,10 @@ def get_makeup_video(input_tgt, filename, video_name):
     # plt.show()
 
 if __name__ == "__main__":
-    print('Which make up style do you choose?')
-    num = input('Input the style number.')
-    name = input('Input output file name.')
-    flag = input('Doyou want to get your face?(yes/no)')
+    print('1. Which make up style do you choose?')
+    num = input('   Input the style number.')
+    name = input('2. Input output file name.')
+    flag = input('3. Do you want to get your face?(yes/no)')
     if(flag=="no"):
         name_ = input('What is your input name?')
         tf.reset_default_graph()
