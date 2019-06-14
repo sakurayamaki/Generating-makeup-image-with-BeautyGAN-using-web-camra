@@ -8,6 +8,9 @@ BeautyGAN on webcamera
 2. Run `pip install -r requirements.txt` in directry named "source_code"  
 3. Run `python main.py` in same directry.  
 4. Then you get some question as follow. Please answer it following instruction.
+5. Finally you get the both image & video with BeautyGAN with the error as below.  
+  `AttributeError: 'NoneType' object has no attribute 'shape'`  
+  But it doesn't matter for the result. Don't worry.
 
 ## Makeup stype:
  - 6 kind of makeup style  
