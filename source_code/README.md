@@ -11,7 +11,7 @@ BeautyGAN on webcamera
 
 ### Makeup stype
 5 kind of makeup style  
-https://github.com/sakurayamaki/Generating-makeup-image-with-BeautyGAN-using-web-camra/edit/master/source_code/makeup/images_all.png
+<img alt=”5 kind of makeup style” src=”https://github.com/sakurayamaki/Generating-makeup-image-with-BeautyGAN-using-web-camra/edit/master/source_code/makeup/images_all.png"/>
 ##### Dependencies:
 - [dlib](http://dlib.net/)
 - [opencv-python](http://docs.opencv.org/3.0-beta/doc/py_tutorials/py_tutorials.html)
