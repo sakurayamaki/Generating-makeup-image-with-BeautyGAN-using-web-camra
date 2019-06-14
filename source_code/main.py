@@ -225,12 +225,13 @@ def get_makeup_video(input_tgt, filename, video_name):
             # Display the resulting frame
             ret, frame = cap.read()
             
-#           print(type(frame))
-            if(type(frame) == "NoneType"):
-                break
 
             img_src  = imutils.resize(frame, width=800)
 
+            #           print(type(frame))
+            if(type(img_src) == "NoneType"):
+                break
+            
             height, width, ch = frame.shape
 
             size = (width,height)
