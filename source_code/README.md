@@ -19,13 +19,10 @@ BeautyGAN on webcamera
  ![images1](https://user-images.githubusercontent.com/20176579/59495678-6ae98800-8ec2-11e9-842f-5200b9f93199.jpg)
  
  - Original video  
- ![result](https://user-images.githubusercontent.com/20176579/59500411-f287c480-8ecb-11e9-987f-41501a252aac.gif)
+ ![test](https://user-images.githubusercontent.com/20176579/59502783-3e893800-8ed1-11e9-9206-688c72e498c8.gif)
  
  - Genarated with BeautyGAN video  
- ![images1](https://user-images.githubusercontent.com/20176579/59502425-4f857980-8ed0-11e9-93cb-f8fe5407eaf7.gif)
-
-
-
+ ![images1](https://user-images.githubusercontent.com/20176579/59502797-4812a000-8ed1-11e9-87af-186a03a70f46.gif)
  
 ##### Dependencies:
 - [dlib](http://dlib.net/)
