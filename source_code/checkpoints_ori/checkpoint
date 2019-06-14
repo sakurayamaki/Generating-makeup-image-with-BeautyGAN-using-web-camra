@@ -1,0 +1,6 @@
+model_checkpoint_path: "beautyGAN-319"
+all_model_checkpoint_paths: "beautyGAN-315"
+all_model_checkpoint_paths: "beautyGAN-316"
+all_model_checkpoint_paths: "beautyGAN-317"
+all_model_checkpoint_paths: "beautyGAN-318"
+all_model_checkpoint_paths: "beautyGAN-319"
