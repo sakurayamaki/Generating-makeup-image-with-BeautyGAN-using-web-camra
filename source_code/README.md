@@ -18,7 +18,9 @@ BeautyGAN on webcamera
  - Makeup style(Chose image 1)  
 ![images1](https://user-images.githubusercontent.com/20176579/59495678-6ae98800-8ec2-11e9-842f-5200b9f93199.jpg)
  - Original video
- - Genarated with BeautyGAN video
+ - Genarated with BeautyGAN video  
+ ![images1](https://user-images.githubusercontent.com/20176579/59495909-f236fb80-8ec2-11e9-8435-dce23f0b74d8.gif)
+
  
 ##### Dependencies:
 - [dlib](http://dlib.net/)
