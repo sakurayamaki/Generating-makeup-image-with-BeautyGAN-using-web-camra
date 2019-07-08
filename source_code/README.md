@@ -5,9 +5,9 @@ BeautyGAN on webcamera
 
 ### Setup:
 1. Download or clone source code from github.
-2. Download trained model from this [url](https://drive.google.com/file/d/17Nm2hR3Hz4U0Yh6M93wfc2A2wQ_pE-hP/view?usp=sharing)
+2. Download trained model from this [url](https://drive.google.com/file/d/17Nm2hR3Hz4U0Yh6M93wfc2A2wQ_pE-hP/view?usp=sharing).
 3. Unzip the downloaded zip file (named checkpoints_ori) at the same derectory of README.
-4. Run `pip install -r requirements.txt` in directry named "source_code"  
+4. Run `pip install -r requirements.txt` in directry named "source_code".
 5. Run `python main.py` in same directry.  
 6. Then you get some question as follow. Please answer it following instruction.
 7. Finally you get the both image & video with BeautyGAN with the error as below.  
